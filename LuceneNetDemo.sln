@@ -1,0 +1,52 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PanGuLucene", "PanGuLucene\PanGuLucene.csproj", "{AA193EBE-1A07-4B6F-8F38-46F9C52C8EC6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ElasticsearchNet_01", "ElasticsearchNet_01\ElasticsearchNet_01.csproj", "{86989E51-8832-4ED5-B5DE-CE4D2C986A2F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Integration.LuceneNet", "Integration.LuceneNet\Integration.LuceneNet.csproj", "{F2744A8B-08B2-4208-9051-2AF4E8841E92}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Integration.LuceneNet.Sample", "Integration.LuceneNet.Sample\Integration.LuceneNet.Sample.csproj", "{54E868F6-9151-4088-9302-2C48DC48280E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SC_LuceneNet", "SC_LuceneNet\SC_LuceneNet\SC_LuceneNet.csproj", "{E9025BC5-D38B-4458-BA3D-0255BDF4465C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JieBaLucene", "JieBaLucene\JieBaLucene.csproj", "{C1D4C3CE-17D1-47DC-A107-503F66240774}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AA193EBE-1A07-4B6F-8F38-46F9C52C8EC6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AA193EBE-1A07-4B6F-8F38-46F9C52C8EC6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AA193EBE-1A07-4B6F-8F38-46F9C52C8EC6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AA193EBE-1A07-4B6F-8F38-46F9C52C8EC6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{86989E51-8832-4ED5-B5DE-CE4D2C986A2F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{86989E51-8832-4ED5-B5DE-CE4D2C986A2F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{86989E51-8832-4ED5-B5DE-CE4D2C986A2F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{86989E51-8832-4ED5-B5DE-CE4D2C986A2F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F2744A8B-08B2-4208-9051-2AF4E8841E92}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F2744A8B-08B2-4208-9051-2AF4E8841E92}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F2744A8B-08B2-4208-9051-2AF4E8841E92}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F2744A8B-08B2-4208-9051-2AF4E8841E92}.Release|Any CPU.Build.0 = Release|Any CPU
+		{54E868F6-9151-4088-9302-2C48DC48280E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{54E868F6-9151-4088-9302-2C48DC48280E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{54E868F6-9151-4088-9302-2C48DC48280E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{54E868F6-9151-4088-9302-2C48DC48280E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E9025BC5-D38B-4458-BA3D-0255BDF4465C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E9025BC5-D38B-4458-BA3D-0255BDF4465C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E9025BC5-D38B-4458-BA3D-0255BDF4465C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E9025BC5-D38B-4458-BA3D-0255BDF4465C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C1D4C3CE-17D1-47DC-A107-503F66240774}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C1D4C3CE-17D1-47DC-A107-503F66240774}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C1D4C3CE-17D1-47DC-A107-503F66240774}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C1D4C3CE-17D1-47DC-A107-503F66240774}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

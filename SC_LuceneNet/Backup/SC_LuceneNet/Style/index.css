@@ -1,0 +1,41 @@
+﻿/* ============布局============ */
+html{height:100%;}
+body {
+color: #222;
+margin:5px 0 0 5px;
+font-family:Arial,tahoma,Helvetica,sans-serif;
+font-size: 12px;
+height:100%;
+overflow:auto;
+width:100%;
+word-break:break-all;
+padding:0;
+}
+.input_text{border:solid 1px #214468}
+a:link{text-decoration:none;color:#1a9bf0;}
+a:visited {text-decoration:none;}
+a:hover {text-decoration:none;}
+a:active {text-decoration:none;}
+.table_list{ margin:5px;width:98%;table-layout:auto ;border-left:solid 1px #214468;border-top:solid 1px #214468;padding:0;border:solid 1px #214468;border-collapse:collapse; }
+.table_list thead{width:98%;padding:0;margin:0;}
+.table_list thead tr{}
+.table_list thead tr td{border-bottom:solid 1px #214468;border-right:solid 1px #214468;height:21px;line-height:21px;text-align:left ;color:#000000;padding:3px;}
+.table_list tbody{width:98%;padding:0;margin:0;}
+.table_list tbody tr th{border-bottom:solid 1px #214468;border-right:solid 1px #214468;height:24px;line-height:24px; text-align:center ;color:#000000; }
+.table_list tbody tr td{border-bottom:solid 1px #214468;border-right:solid 1px #214468;background-color:#fff;height:24px;line-height:24px; text-align:center ;color:#000000;}
+.table_list tbody tr td a{padding-right:10px;}
+.table_list tfoot{width:98%;padding:0;margin:0;}
+.table_list tfoot tr {background-color:#fff;height:30px;}
+.table_list tfoot tr td{text-align:center;}
+
+div.sabrosus {margin: 3px; padding: 3px 3px; text-align: center;margin:0 auto;}
+div.sabrosus a {margin-right: 2px; padding: 2px 5px; cursor:pointer;-moz-border-radius:5px 5px 5px 5px;color:#214468;font-weight:bold ;}
+div.sabrosus span{display:inline-block;margin-right:5px;font-weight: bold; color: #1d78b8; padding: 2px 5px; border:1px solid #214464;-moz-border-radius:5px 5px 5px 5px}
+div.sabrosus span:hover{ font-weight:bold ;color:#fff;background:#214468; }
+div.sabrosus span:hover a{color:#fff;}
+div.sabrosus span.current {display:inline-block;margin-right:5px;font-weight: bold; color: #fff;  padding: 2px 5px;-moz-border-radius:5px 5px 5px 5px;background:#214468;}
+div.sabrosus span.current a{color:#fff;}
+.page_left{float:left ;padding:3px;color:#214468;}
+.page_right{float:right ;padding:3px;color:#214468;}
+.page_right a{margin:0  2px 0 2px;color:#214468;}
+.page_right input{width:30px;height:15px;line-height:15px;margin:0  2px 0 2px;}
