@@ -62,7 +62,6 @@ namespace JieBaLucene
                 list.Add(new { title = doc.Get("title"), body = doc.Get("body"), data = doc.Get("data") });
             }
             searcher.Dispose();
-
             Console.WriteLine(JsonConvert.SerializeObject(list));
         }
 
