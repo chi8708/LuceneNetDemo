@@ -44,8 +44,10 @@ namespace JieBaLucene
             IndexSearcher searcher = new IndexSearcher(FSDirectory.Open(IndexDic), true);
             QueryParser qp = new QueryParser(Lucene.Net.Util.Version.LUCENE_30, "body", new JiebaAnalyzer());
             BooleanQuery bq = new BooleanQuery();
-            //分词空格连接 
-            keyword = GetKeyWordsSplitBySpace(keyword, new JiebaTokenizer(new JiebaSegmenter(), keyword));
+
+            //GetKeyWordsSplitBySpace分词空格连接 搜索结果更多联想功能。不使用时：body:"银河 大道 银河 星辰 花
+            //。 使用后body:银河 body:大道 body:银河 body:星辰 body:花
+          // keyword = GetKeyWordsSplitBySpace(keyword, new JiebaTokenizer(new JiebaSegmenter(), keyword));
             Query query = qp.Parse(keyword); //2008年底  
             bq.Add(query, Occur.MUST);
 
