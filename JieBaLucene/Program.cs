@@ -1,4 +1,5 @@
 ﻿using JiebaNet.Integration.LuceneNet;
+using JiebaNet.Segmenter;
 using Lucene.Net.Documents;
 using Lucene.Net.Index;
 using Lucene.Net.QueryParsers;
@@ -27,7 +28,7 @@ namespace JieBaLucene
         }
         static void Main(string[] args)
         {
-           // CreateIndex();
+            CreateIndex();
             while (true)
             {
                 Console.Write("Enter the keyword: ");
@@ -43,6 +44,8 @@ namespace JieBaLucene
             IndexSearcher searcher = new IndexSearcher(FSDirectory.Open(IndexDic), true);
             QueryParser qp = new QueryParser(Lucene.Net.Util.Version.LUCENE_30, "body", new JiebaAnalyzer());
             BooleanQuery bq = new BooleanQuery();
+            //分词空格连接 
+            keyword = GetKeyWordsSplitBySpace(keyword, new JiebaTokenizer(new JiebaSegmenter(), keyword));
             Query query = qp.Parse(keyword); //2008年底  
             bq.Add(query, Occur.MUST);
 
@@ -65,6 +68,24 @@ namespace JieBaLucene
             Console.WriteLine(JsonConvert.SerializeObject(list));
         }
 
+        private static string GetKeyWordsSplitBySpace(string keywords, JiebaTokenizer tokenizer)
+        {
+            var result = new StringBuilder();
+
+            var words = tokenizer.Tokenize(keywords);
+
+            foreach (var word in words)
+            {
+                if (string.IsNullOrWhiteSpace(word.Word))
+                {
+                    continue;
+                }
+
+                result.AppendFormat("{0} ", word.Word);
+            }
+
+            return result.ToString().Trim();
+        }
         private static void CreateIndex()
         {
             string[] texts = new string[] { 
@@ -93,7 +114,8 @@ namespace JieBaLucene
                 "【简介：他废掉了一切不服者】弗格森执教曼联26年，夺得13个英超冠军，4个联赛杯冠军，5个足总杯冠军，2个欧冠冠军，1个世俱杯冠军，1个优胜者杯冠军，1个欧洲超级杯。如果非要用一句话来总结他的伟大，小编个人的总结是：他废掉了一切敢于“不服者”，包括小贝同学",
                 "这个世界干啥最赚钱？历史证明，持续保持对一个国家进行专制统治，通过无节制的赋税和滥发货币来掠夺全体国民的私人财富是唯一的标准答案。历史在进步，这种商业模式也在改头换面，于是，党专制替代家族专制，集体世袭权利代替个体世袭权力。既然改头换面，理论体系也得改变，这个理论体系就是特色论。",
                 "【拥有“全球最美海滩”的塞舌尔将对中国游客免签！】#便民提示#准备出国白相的筒子冒个泡吧~你们有福啦。拥有“全球最美丽的海滩”和“最洁净的海水”美誉的塞舌尔，将可凭我国有效护照免签入境，最多停留30天这里还是英国威廉王子和王妃的蜜月地~~所以，别再只盯着马尔代夫一处啦",
-                "【用数据告诉你手游有多热】今天，作为本届GMIC 的一部分，GGS全球移动游戏峰会召开。嘉宾和游戏开发者们探讨了移动游戏的现状与发展趋势。手游则是最为重要的一大关键词。盛大游戏总裁钱东海分享了日本最大手游公司CEO预测的数据：2015年全球游戏产业的格局中80%都是手机游戏。http://t.cn/zTHdkFY"
+                "【用数据告诉你手游有多热】今天，作为本届GMIC 的一部分，GGS全球移动游戏峰会召开。嘉宾和游戏开发者们探讨了移动游戏的现状与发展趋势。手游则是最为重要的一大关键词。盛大游戏总裁钱东海分享了日本最大手游公司CEO预测的数据：2015年全球游戏产业的格局中80%都是手机游戏。http://t.cn/zTHdkFY",
+                "银河大道银河星辰花园6-1-9楼901号"
             };
 
             IndexWriter iw = new IndexWriter(FSDirectory.Open(IndexDic), new JiebaAnalyzer() , true, IndexWriter.MaxFieldLength.LIMITED);
